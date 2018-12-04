@@ -3,7 +3,7 @@ function buildMetadata(sample) {
   // @TODO: Complete the following function that builds the metadata panel
 
   // Use `d3.json` to fetch the metadata for a sample
-  var url = "http://127.0.0.1:5000/metadata/" + sample;
+  var url = window.location.href + "metadata/" + sample;
   d3.json(url).then(function(data) {
     console.log(data);
  
@@ -32,7 +32,7 @@ function buildMetadata(sample) {
 
 function buildCharts(sample) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
-  var url = "http://127.0.0.1:5000/samples/" + sample;
+  var url = window.location.href + "samples/" + sample;
   d3.json(url).then(function(data) {
     console.log(data);
     // @TODO: Build a Pie Chart
